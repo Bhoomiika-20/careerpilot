@@ -1,0 +1,29 @@
+{
+  "name": "careerpilot-ai",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w frontend",
+    "start": "npm start -w backend",
+    "test": "npm test -w backend",
+    "seed": "npm run seed -w backend",
+    "index:vector": "npm run index:vector -w backend",
+    "test:live": "npm run test:live -w backend",
+    "test:unit": "npm run test:unit -w backend",
+    "test:integration": "npm run test:integration -w backend",
+    "test:ui": "node tests/ui/run.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "concurrently": "^9.2.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

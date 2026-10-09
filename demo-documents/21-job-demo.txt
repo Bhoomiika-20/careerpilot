@@ -1,0 +1,2 @@
+FICTIONAL DEMO: Practice opportunity matching for Backend Developer. Build, test and document applications with Node.js, Express, MongoDB, Redis, Docker. Explain your projects and collaborate through Git. This is not an active vacancy.
+Required skills: Node.js, Express, MongoDB, Redis, Docker. Preferred skills: AWS, Testing. Location: Remote. Work mode: Hybrid.

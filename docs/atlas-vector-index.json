@@ -1,0 +1,13 @@
+{
+  "name": "careerpilot_vector",
+  "type": "vectorSearch",
+  "definition": {
+    "fields": [
+      { "type": "vector", "path": "embedding", "numDimensions": 1536, "similarity": "cosine" },
+      { "type": "filter", "path": "ownerKey" },
+      { "type": "filter", "path": "kind" },
+      { "type": "filter", "path": "documentId" },
+      { "type": "filter", "path": "embeddingModel" }
+    ]
+  }
+}

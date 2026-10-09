@@ -1,0 +1,10 @@
+import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
+import mongoose from 'mongoose';
+import { connectDatabase } from '../config/database.js';
+import { readContext } from './capability.js';
+import { createMcpServer } from './createServer.js';
+const claims = readContext(process.env.MCP_CONTEXT || '');
+await connectDatabase();
+const server = createMcpServer(claims);
+await server.connect(new StdioServerTransport());
+process.on('SIGTERM', async () => { await server.close(); await mongoose.disconnect(); process.exit(0); });

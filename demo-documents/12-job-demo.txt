@@ -1,0 +1,2 @@
+FICTIONAL DEMO: Practice opportunity matching for Full Stack Developer. Build, test and document applications with React, Node.js, JavaScript, SQL. Explain your projects and collaborate through Git. This is not an active vacancy.
+Required skills: React, Node.js, JavaScript, SQL. Preferred skills: AWS, Testing. Location: Pune. Work mode: Hybrid.

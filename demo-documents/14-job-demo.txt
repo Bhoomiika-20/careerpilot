@@ -1,0 +1,2 @@
+FICTIONAL DEMO: Practice opportunity matching for Cloud Engineer. Build, test and document applications with AWS, Docker, Linux, Git. Explain your projects and collaborate through Git. This is not an active vacancy.
+Required skills: AWS, Docker, Linux, Git. Preferred skills: Testing. Location: Hyderabad. Work mode: Remote.

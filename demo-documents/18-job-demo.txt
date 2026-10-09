@@ -1,0 +1,2 @@
+FICTIONAL DEMO: Practice opportunity matching for Frontend Developer. Build, test and document applications with React, TypeScript, CSS, Testing. Explain your projects and collaborate through Git. This is not an active vacancy.
+Required skills: React, TypeScript, CSS, Testing. Preferred skills: AWS. Location: Hyderabad. Work mode: Hybrid.

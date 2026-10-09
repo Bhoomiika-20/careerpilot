@@ -1,0 +1,2 @@
+FICTIONAL DEMO: Practice opportunity matching for Data Engineer. Build, test and document applications with SQL, Python, ETL, MongoDB. Explain your projects and collaborate through Git. This is not an active vacancy.
+Required skills: SQL, Python, ETL, MongoDB. Preferred skills: AWS, Testing. Location: Remote. Work mode: On-site.

@@ -1,0 +1,9 @@
+import { z } from 'zod';
+export const id = z.string().regex(/^[a-f\d]{24}$/i, 'Invalid record ID');
+export const text = z.string().trim().min(1).max(200);
+const url = z.union([z.string().url().refine(v => /^https?:\/\//.test(v), 'Use an HTTP(S) URL'), z.literal('')]);
+export const profileSchema = z.object({ fullName: text.optional(), location: z.string().max(200).optional(), graduationYear: z.number().int().min(2000).max(2100).nullable().optional(), degree: z.string().max(100).optional(), branch: z.string().max(100).optional(), college: z.string().max(200).optional(), cgpa: z.number().min(0).max(10).nullable().optional(), expectedGraduationDate: z.string().datetime().nullable().optional(), annualFamilyIncome: z.number().min(0).nullable().optional(), preferredRoles: z.array(text).max(20).optional(), preferredLocations: z.array(text).max(20).optional(), interests: z.array(text).max(20).optional(), industries: z.array(text).max(20).optional() }).strict();
+export const skillSchema = z.object({ name: text, category: z.string().max(80).default('Other'), proficiency: z.enum(['Beginner','Intermediate','Advanced']).default('Beginner') }).strict();
+export const projectSchema = z.object({ name: text, description: z.string().max(3000).default(''), technologies: z.array(text).max(30).default([]), githubUrl: url.default(''), liveUrl: url.default('') }).strict();
+export const reminderSchema = z.object({ title: text, remindAt: z.string().datetime().refine(v => new Date(v) > new Date(), 'Choose a future reminder time'), opportunityId: id.optional(), kind: z.enum(['scholarship', 'job']).optional(), note: z.string().max(1000).default('') }).strict().refine(v => Boolean(v.opportunityId) === Boolean(v.kind), 'Provide both opportunity ID and kind');
+export const applicationSchema = z.object({ opportunityId: id, kind: z.enum(['scholarship', 'job']) }).strict();
